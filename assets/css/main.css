@@ -292,6 +292,7 @@ input, select, textarea {
 
 	.row {
 		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
@@ -1917,6 +1918,37 @@ input, select, textarea {
 			ul.actions li:first-child {
 				margin-left: 0;
 			}
+		
+/* Video-text-video */
+
+	.vid-vid {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: auto;
+	}
+
+	video {
+		width: 40%;
+		margin: auto;
+		
+	}
+
+	.text-text {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: auto;
+		padding: 20px;
+	}
+
+	text {
+		width: 40%;
+		margin: auto;
+		font-size: 22px;
+		justify-content: center;
+		padding-bottom: 20px;
+	}
 
 /* Box */
 
