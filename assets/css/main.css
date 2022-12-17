@@ -1945,9 +1945,15 @@ input, select, textarea {
 	text {
 		width: 40%;
 		margin: auto;
-		font-size: 22px;
+		font-size: 20px;
 		justify-content: center;
+		font-weight: bold;
 		padding-bottom: 20px;
+	}
+
+	.image-container img {
+		margin: auto;
+		padding: 30px;
 	}
 
 /* Box */

@@ -41,16 +41,10 @@
 		<!-- Explanation -->
 			<article id="explanation" class="wrapper style2">
 				<div class="container">
-					<!-- <header>
-						<h1>Here are the controls you have to keep in mind</h1>
+					
+					<header id="controls">
+						<h1>There are only 2 controls to keep in mind</h1>
 					</header>
-					<div class="row">
-						<article class="image-text">
-							<a href="#explanation" class="image featured"><img width="320" height="240" src="images/pic00.jpg" alt="" /></a>
-							<h2>Text number 2 goes here and I'm not sure what else I can put here</h2>
-						</article>
-						
-					</div> -->
 
 					<div class="vid-vid">
 						<video id="vid1" src="images/short_jump.mp4" autoplay loop muted></video>
@@ -62,60 +56,67 @@
 						<text>You can use a long jump with the 'SPACE' key</text>
 					</div>
 
+					<div class="image-container col-3 col-6 col-9 col-12">
+						<img id="lamp" src="images/value_lamp.png">
+						<img id="frame" src="images/value_pictureframe2.png">
+						<img id="vase" src="images/value_vase_empty.png">
+						<img id="flowers" src="images/value_vase_flowers.png">
+						<h3>Jump onto and destroy all these items to gain points</h3>
 
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#explanation" class="image featured"><img width="320" height="240" src="images/pic00.jpg" alt="" /></a>
-								<h3><a href="#explanation">Lobby Creation lets make this a lot of words to see what it looks like</a></h3>
-								<p>with Create and Join buttons uuosueoisvbh hvuyrgv sbvie fa8f gaw8ig 8g08gq08gf a0fh</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#explanation" class="image featured"><img width="320" height="240" src="images/Main.JPG" alt="" /></a>
-								<h3><a href="#explanation">Lobby Creation</a></h3>
-								<p>After a brief wait, you will arrive to this screen with Create and Join buttons</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#explanation" class="image featured"><img width="320" height="240" src="images/Create.jpg" alt="" /></a>
-								<h3><a href="#explanation">Creation</a></h3>
-								<p>One player types a lobby name into the top textbox and then clicks Create</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#explanation" class="image featured"><img width="320" height="240" src="images/Join.jpg" alt="" /></a>
-								<h3><a href="#explanation">Joining</a></h3>
-								<p>The other player types the same lobby name in the lower textbox and click Join</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#explanation" class="image featured"><img width="320" height="240" src="images/Waiting.jpg" alt="" /></a>
-								<h3><a href="#explanation">Waiting</a></h3>
-								<p>Both players have this screen until they both load into the game</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#explanation" class="image featured"><img width="320" height="240" src="images/Play.JPG" alt="" /></a>
-								<h3><a href="#explanation">Duel!</a></h3>
-								<p>Battle it out to the death!<br>If any issues arise on any step, please refresh the page and try again</p>
-							</article>
-						</div>
+						<body onload="restorePoints()"></body>
+
+						<script>
+							function breakPoints() {
+								document.getElementById('lamp').src = "images/broken_lamp.png";
+								setTimeout(() => {
+									document.getElementById('frame').src = "images/broken_frame.png";
+								}, 500);
+								setTimeout(() => {
+									document.getElementById('vase').src = "images/broken_vase.png";
+								}, 1000);
+								setTimeout(() => {
+									document.getElementById('flowers').src = "images/broken_flowers.png";
+								}, 1500);
+								setTimeout(restorePoints, 3000);
+							}
+
+							function restorePoints() {
+								document.getElementById('lamp').src = "images/value_lamp.png";
+								setTimeout(() => {
+									document.getElementById('frame').src = "images/value_pictureframe2.png";
+								}, 500);
+								setTimeout(() => {
+									document.getElementById('vase').src = "images/value_vase_empty.png";
+								}, 1000);
+								setTimeout(() => {
+									document.getElementById('flowers').src = "images/value_vase_flowers.png";
+								}, 1500);
+								setTimeout(breakPoints, 6000);
+							}
+
+						</script>
 					</div>
-					<div class="container" style="margin-top: 100px">
+
+					<!-- Add video of owner coming into frame many times -->
+					<!-- Add  -->
+
+					<div class="image-container col-4 col-8 col-12">
+						<img id="catnip" src="images/obstacle_catnip.png">
+						<img id="feather" src="images/obstacle_feather.png">
+						<img id="yarn" src="images/obstacle_yarn.png">
+						<h3>Avoid these playful items that slow you down and let your owner catch up</h3>
+					</div>
+
+					<!-- Add graphic to show where health and points are on the screen -->
+					<!-- <div class="container" style="margin-top: 100px">
 						<header>
 						<h2>Controls</h2>
 						<p>Simply use the A/D keys for movement, spacebar for jumping, mouse for aiming, and left click for shooting</p>
-					</header>
-					</div>
+						</header>
+					</div> -->
 					<footer>
 						<h3>Ready to play the game?</h3>
-						<a href="https://lgarci78.itch.io/deularia"target="_blank" class="button large scrolly">Play</a>
+						<a href="https://prorocky.github.io/Kitty-Run/"target="_blank" class="button large scrolly">Play</a>
 					</footer>
 				</div>
 			</article>
@@ -124,18 +125,18 @@
 		<article id="devs" class="wrapper style3">
 			<div class="container">
 				<header>
-					<h1>About Duelaria</h1>
+					<h1>About Kitty Run</h1>
 					<h2>This game was made by a group of 4 people</h2>
 				</header>
 				<dl>
 					<dt>Oran Shadian</dt>
-					<dd>Gameplay programmer, implemented movement, shooting, and collision logic</dd>
-					<dt>Dylan Soungpanya</dt>
-					<dd>Network/UI programmer, implemented netcode and various UI elements such as healthbar</dd>
-					<dt>Bemister Tessema</dt>
-					<dd>Artist, created background and player assets</dd>
-					<dt>Luis Garcia</dt>
-					<dd>Systems programmer, implemented game flow logic</dd>
+					<dd>Gameplay Programmer, wrote the whole game with the exception of animating the kitty</dd>
+					<dt>Diego Agurto</dt>
+					<dd>Character Programmer, wrote the code to display the kitty's run anumation</dd>
+					<dt>Makkenzie Zepeda</dt>
+					<dd>Artist, drew animation sprite of kitty as well as UI assets</dd>
+					<dt>Gabriella Flores</dt>
+					<dd>Artist, drew the obstacles, point items, and background assets</dd>
 				</dl>
 			</div>
 		</article>
